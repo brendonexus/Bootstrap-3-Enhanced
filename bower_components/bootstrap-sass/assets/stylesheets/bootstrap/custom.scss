@@ -1,0 +1,73 @@
+//This file is used for custom classes that integrate with Bootstrap to improve development experience
+
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
+    }
+  }
+}
+
+@media($lg){
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
+@media($md){
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+@media($sm){
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+}
+
+@media($xs){
+  .text-xs-left {
+    text-align: left;
+  }
+
+  .text-xs-center {
+    text-align: center;
+  }
+
+  .text-xs-right {
+    text-align: right;
+  }
+}
+
